@@ -11,6 +11,18 @@
       "name": "Неизвестный герой",
       "description": "Скрывающийся в тени",
       "element": "wind"
+    },
+    {
+      "id": "29520aa1-1dcd-421a-8a74-c7c289748c39",
+      "name": "sdfhsdf",
+      "description": "sadga",
+      "element": "earth"
+    },
+    {
+      "id": "26a2b37c-920b-4eee-a317-4a9de4f590fd",
+      "name": "awrg",
+      "description": "awg",
+      "element": "water"
     }
   ],
   "filters": [
