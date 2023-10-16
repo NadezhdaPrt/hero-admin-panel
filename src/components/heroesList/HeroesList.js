@@ -7,6 +7,7 @@ import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './heroesList.scss';
+import { createSelector } from 'reselect';
 
 
 // Задача для этого компонента:
@@ -15,13 +16,26 @@ import './heroesList.scss';
 // Удаление идет и с json файла при помощи метода DELETE
 
 const HeroesList = () => {
-    const filteredHeroes = useSelector(state => {
+    const filteredHeroesSelector = createSelector(
+        (state) => state.filters.activeFilter,
+        (state) => state.heroes.heroes,
+        (filter, heroes) => {
+            console.log('render');
+            if(filter === 'all') {
+                return heroes;
+            } else {
+                return heroes.filter(item => item.element === filter);
+            }
+        }
+    )
+    /* const filteredHeroes = useSelector(state => {
         if(state.filters.activeFilter === 'all') {
             return state.heroes.heroes;
         } else {
             return state.heroes.heroes.filter(item => item.element === state.filters.activeFilter)
         }
-    })
+    }) */
+    const filteredHeroes = useSelector(filteredHeroesSelector);
     const heroesLoadingStatus = useSelector(state => state.heroesLoadingStatus);
     const dispatch = useDispatch();
     const {request} = useHttp();
