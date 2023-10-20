@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHttp } from "../../hooks/http.hook";
-import { fetchFilters, selectAll } from "../heroesFilters/filtersSlice";
-import classNames from "classnames";
-import Spinner from "../spinner/Spinner";
-import { filtersChanged } from "./filtersSlice";
+import {useHttp} from '../../hooks/http.hook';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import classNames from 'classnames';
 import store from '../../store';
+
+import { filtersChanged, fetchFilters, selectAll } from './filtersSlice';
+import Spinner from '../spinner/Spinner';
 
 const HeroesFilters = () => {
 

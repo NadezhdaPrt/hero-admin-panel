@@ -13,6 +13,12 @@
       "element": "wind"
     },
     {
+      "id": 3,
+      "name": "Морской герой",
+      "description": "Как аквамен, но не из DC",
+      "element": "water"
+    },
+    {
       "id": "97855561-f5d4-4f58-b41c-c72a10c45200",
       "name": "fhdzd",
       "description": "asfh",
@@ -23,6 +29,12 @@
       "name": "dfhd",
       "description": "areh",
       "element": "wind"
+    },
+    {
+      "id": "655a04c4-6707-417b-811e-9f9452b95717",
+      "name": "dsg",
+      "description": "weh",
+      "element": "earth"
     }
   ],
   "filters": [
